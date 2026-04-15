@@ -1,6 +1,6 @@
 Processo de Criação 
 
-O projeto foi inicializado utilizando comando dos propio laravel versão 11 
+O projeto foi inicializado utilizando comando dos propio laravel versão 11 utilizando bootstrap css, js, criando um sistema responsivo 
 
 composer create-project laravel/laravel sistema-web  "11.*"
 
@@ -54,7 +54,7 @@ Usado o CSS (Bootstrap 4.6), FontAwesome
 Fluxo de Desenvolvimento
 
 
-Primeiro, definimos os caminhos de URL .
+Primeiro, defini os caminhos de URL  rotas
 Criação das tabelas no banco de dados via migrations para receber informações.
 Criei as interfaces visuais primeiro 
 Implemenação da lógica nos controladores.
@@ -68,6 +68,17 @@ Useiícones da sidebar e estados ativos para criar uma identidade visual coerent
 
 
 Cálculos Dinâmicos com JavaScript Puro mesmo no cadastro de pedidos, para calcular o valor total de cada item e o valor geral do pedido em tempo real.
+
+
+Para desenvolver esse projeto realizei o usuo do Gemini para me auxiliar com comandos, e também utilizei para auxiliar na criação das rotas, controllers, models e views utilizei também  para criar os estilos css e ganhar tempo. 
+
+Caso tivesse mais tempo iria implementar :
+utilizar react para os componentes 
+me apronfundaria sobre Filas e Redis
+realizaria as validações nos inputs dos formularios via laravel
+aplicaria retornos em JSON e não em HTML 
+
+
 
 
 
