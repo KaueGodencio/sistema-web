@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #0088CC;
+    --primary-hover: #0077b3;
+    --bg-light: #f4f7f6;
+    --sidebar-bg: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --border-radius: 15px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+
+#wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#content {
+    width: 100%;
+    padding: 30px;
+    transition: var(--transition);
+}
+
+
+#sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    background: var(--sidebar-bg);
+    min-height: 100vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+#sidebar.active {
+    margin-left: -260px;
+}
+
+#sidebar .sidebar-header {
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+#sidebar ul.components {
+    padding: 20px 15px;
+}
+
+#sidebar ul li a {
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--text-muted);
+    font-weight: 500;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+#sidebar ul li a i {
+    width: 25px;
+    font-size: 1.1em;
+}
+
+#sidebar ul li a:hover,
+#sidebar ul li.active>a {
+    background: rgba(0, 136, 204, 0.1);
+    color: var(--primary-color);
+}
+
+#sidebar ul li.active>a {
+    background: var(--primary-color);
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+}
+
+
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    background: #fff;
+    margin-bottom: 25px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px 25px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+
+.btn {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.02);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.table-responsive {
+    padding: 30px;
+}
+
+
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    border-top: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    padding: 15px 20px;
+}
+
+.table tbody td {
+    padding: 15px 20px;
+    vertical-align: middle;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    padding: 6px 15px;
+    margin-left: 10px;
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.page-link {
+    border-radius: 8px !important;
+    margin: 0 3px;
+    color: var(--primary-color);
+}
+
+
+.badge {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+
+.modal-content {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 25px;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    height: auto;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.1);
+    border-color: var(--primary-color);
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -260px;
+        position: fixed;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #content {
+        padding: 15px;
+    }
+}
