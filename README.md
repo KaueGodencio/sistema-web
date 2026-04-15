@@ -23,9 +23,12 @@ Configurar banco de dados
 DB_DATABASE=sistema_web
  
 
-No terminal rodar os comandos 
+No terminal rodar os comandos :
+
 php artisan key:generate
+
 php artisan migrate
+
 php artisan db:seed 
 
 
