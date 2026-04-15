@@ -11,8 +11,10 @@ Composer
 MySQL (USEI O XAMPP)
 
 Clonar o repositório
+
 git clone https://github.com/KaueGodencio/sistema-web.git
 cd sistema-web
+
 
 # Instalar dependências do PHP
 composer install
